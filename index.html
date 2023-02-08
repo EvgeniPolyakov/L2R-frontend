@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>L2R Name Transcriptor</title>
     <link rel="stylesheet" type="text/css" href="front.css">
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" href="resources/icon.png">
 </head>
 <body>
 <div id="container">
@@ -28,7 +28,7 @@
             <span id="finnish" class="emoji" onclick="setLanguage('Finnish')">🇫🇮</span>
             <span id="french" class="emoji" onclick="setLanguage('French')">🇫🇷</span>
             <span id="hebrew" class="emoji" onclick="setLanguage('Hebrew')">🇮🇱</span>
-<!--            <span id="hungarian" class="emoji" onclick="setLanguage('Hungarian')">🇭🇺</span>-->
+            <span id="hungarian" class="emoji" onclick="setLanguage('Hungarian')">🇭🇺</span>
             <span id="georgian" class="emoji" onclick="setLanguage('Georgian')">🇬🇪</span>
             <span id="german" class="emoji" onclick="setLanguage('German')">🇩🇪</span>
             <span id="greek" class="emoji" onclick="setLanguage('Greek')">🇬🇷</span>
@@ -55,6 +55,7 @@
         <button type="button" id="transcribeBtn">Transcribe</button>
         <br>
         <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+        <button type="button" id="copyBtn">Copy to Clipboard 📋</button>
     </form>
 </div>
 <script type="text/javascript" src="front.js"></script>

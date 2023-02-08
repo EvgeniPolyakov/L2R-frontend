@@ -36,3 +36,9 @@ transcribeBtn.addEventListener("click", () => {
         })
         .catch(error => console.error("Error:", error));
 });
+
+document.getElementById("copyBtn").addEventListener("click", function() {
+    var outputText = document.getElementById("outputText");
+    outputText.select();
+    document.execCommand("copy");
+});

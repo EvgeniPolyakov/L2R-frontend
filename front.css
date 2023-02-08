@@ -6,7 +6,12 @@
     background-color: #a4bbbd;
     border-radius: 10px;
     box-shadow: 2px 2px 2px #ccc;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'TitleFont', sans-serif;
+}
+
+@font-face {
+    font-family: 'TitleFont';
+    src: url('resources/Font.ttf') format('truetype');
 }
 
 form {
@@ -35,7 +40,6 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
 }
 
 textarea:focus {
@@ -65,7 +69,7 @@ textarea:focus {
     border: 2px #708789FF;
 }
 
-button {
+button[id="transcribeBtn"] {
     background-color: #295be0;
     color: white;
     padding: 12px 20px;
@@ -79,7 +83,26 @@ button {
     transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+button[id="transcribeBtn"]:hover {
+    background-color: #295be0;
+    box-shadow: 0 0 5px #295be0;
+}
+
+button[id="copyBtn"] {
+    background-color: #295be0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button[id="copyBtn"]:hover {
     background-color: #295be0;
     box-shadow: 0 0 5px #295be0;
 }
