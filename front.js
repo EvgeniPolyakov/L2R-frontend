@@ -1,12 +1,14 @@
 let language = "Russian";
 
-function setLanguage(lang) {
-    language = lang;
+function setLanguage() {
+    const select = document.getElementById("languageSelect");
+    const selectedOption = select.options[select.selectedIndex];
+    language = selectedOption.value;
 
     const emojis = document.querySelectorAll(".emoji");
     emojis.forEach(emoji => {
         emoji.classList.remove("active");
-        if (emoji.id === lang.toLowerCase()) {
+        if (emoji.id === selectedOption.value.toLowerCase()) {
             emoji.classList.add("active");
         }
     });
