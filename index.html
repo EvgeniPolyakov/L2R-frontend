@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>L2R Name Transcriptor</title>
@@ -9,53 +9,57 @@
 <body>
 <div id="container">
     <h1>L2R Name Transcriptor</h1>
-    <form>
-        <label for="inputText">Enter text to transcribe:</label>
-        <br>
-        <textarea id="inputText" rows="4" cols="50"></textarea>
-        <br>
         <div id="languageSelector">
-            <span id="albanian" class="emoji" onclick="setLanguage('Albanian')">🇦🇱</span>
-            <span id="armenian" class="emoji" onclick="setLanguage('Armenian')">🇦🇲</span>
-            <span id="azeri" class="emoji" onclick="setLanguage('Azeri')">🇦🇿</span>
-            <span id="brazilian" class="emoji" onclick="setLanguage('Brazilian')">🇧🇷</span>
-            <span id="bulgarian" class="emoji" onclick="setLanguage('Bulgarian')">🇧🇬</span>
-            <span id="chinese" class="emoji" onclick="setLanguage('Chinese')">🇨🇳</span>
-            <span id="czech" class="emoji" onclick="setLanguage('Czech')">🇨🇿</span>
-<!--            <span id="danish" class="emoji" onclick="setLanguage('Danish')">🇩🇰</span>-->
-            <span id="dutch" class="emoji" onclick="setLanguage('Dutch')">🇳🇱</span>
-            <span id="estonian" class="emoji" onclick="setLanguage('Estonian')">🇪🇪</span>
-            <span id="finnish" class="emoji" onclick="setLanguage('Finnish')">🇫🇮</span>
-            <span id="french" class="emoji" onclick="setLanguage('French')">🇫🇷</span>
-            <span id="hebrew" class="emoji" onclick="setLanguage('Hebrew')">🇮🇱</span>
-            <span id="hungarian" class="emoji" onclick="setLanguage('Hungarian')">🇭🇺</span>
-            <span id="georgian" class="emoji" onclick="setLanguage('Georgian')">🇬🇪</span>
-            <span id="german" class="emoji" onclick="setLanguage('German')">🇩🇪</span>
-            <span id="greek" class="emoji" onclick="setLanguage('Greek')">🇬🇷</span>
-<!--            <span id="icelandic" class="emoji" onclick="setLanguage('Icelandic')">🇮🇸</span>-->
-            <span id="italian" class="emoji" onclick="setLanguage('Italian')">🇮🇹</span>
-            <span id="japanese" class="emoji" onclick="setLanguage('Japanese')">🇯🇵</span>
-            <span id="lithuanian" class="emoji" onclick="setLanguage('Lithuanian')">🇱🇹</span>
-            <span id="latvian" class="emoji" onclick="setLanguage('Latvian')">🇱🇻</span>
-            <span id="macedonian" class="emoji" onclick="setLanguage('Macedonian')">🇲🇰</span>
-            <span id="moldovan" class="emoji" onclick="setLanguage('Moldovan')">🇲🇩</span>
-<!--            <span id="norwegian" class="emoji" onclick="setLanguage('Norwegian')">🇳🇴</span>-->
-            <span id="polish" class="emoji" onclick="setLanguage('Polish')">🇵🇱</span>
-            <span id="portuguese" class="emoji" onclick="setLanguage('Portuguese')">🇵🇹</span>
-            <span id="romanian" class="emoji" onclick="setLanguage('Romanian')">🇷🇴</span>
-            <span id="russian" class="emoji" onclick="setLanguage('Russian')">🇷🇺</span>
-            <span id="serbocroat" class="emoji" onclick="setLanguage('Serbocroat')">🇷🇸</span>
-            <span id="slovak" class="emoji" onclick="setLanguage('Slovak')">🇸🇰</span>
-            <span id="spanish" class="emoji" onclick="setLanguage('Spanish')">🇪🇸</span>
-<!--            <span id="swedish" class="emoji" onclick="setLanguage('Swedish')">🇸🇪</span>-->
-            <span id="turkish" class="emoji" onclick="setLanguage('Turkish')">🇹🇷</span>
-            <span id="ukrainian" class="emoji" onclick="setLanguage('Ukrainian')">🇺🇦</span>
+            <select id="languageSelect" onchange="setLanguage(this.value)">
+                <option value="" disabled selected>Select Language</option>
+                <option value="Albanian" >🇦🇱 Albanian</option>
+                <option value="Armenian">🇦🇲 Armenian</option>
+                <option value="Azeri">🇦🇿 Azeri</option>
+                <option value="Brazilian">🇧🇷 Brazilian</option>
+                <option value="Serbocroat">🇧🇦 Bosnian</option>
+                <option value="Bulgarian">🇧🇬 Bulgarian</option>
+                <option value="Chinese">🇨🇳 Chinese</option>
+                <option value="Czech">🇨🇿 Czech</option>
+                <option value="Serbocroat">🇭🇷 Croatian</option>
+                <option value="Danish">🇩🇰 Danish</option>
+                <option value="Dutch">🇳🇱 Dutch</option>
+                <option value="Estonian">🇪🇪 Estonian</option>
+                <option value="Finnish">🇫🇮 Finnish</option>
+                <option value="French">🇫🇷 French</option>
+                <option value="Hebrew">🇮🇱 Hebrew</option>
+                <option value="Hungarian">🇭🇺 Hungarian</option>
+                <option value="Georgian">🇬🇪 Georgian</option>
+                <option value="German">🇩🇪 German</option>
+                <option value="Greek">🇬🇷 Greek</option>
+                <option value="Icelandic">🇮🇸 Icelandic</option>
+                <option value="Italian">🇮🇹 Italian</option>
+                <option value="Japanese">🇯🇵 Japanese</option>
+                <option value="Lithuanian">🇱🇹 Lithuanian</option>
+                <option value="Latvian">🇱🇻 Latvian</option>
+                <option value="Macedonian">🇲🇰 Macedonian</option>
+                <option value="Moldovan">🇲🇩 Moldovan</option>
+                <option value="Norwegian">🇳🇴 Norwegian</option>
+                <option value="Polish">🇵🇱 Polish</option>
+                <option value="Portuguese">🇵🇹 Portuguese</option>
+                <option value="Romanian">🇷🇴 Romanian</option>
+                <option value="Russian">🇷🇺 Russian</option>
+                <option value="Serbocroat">🇷🇸 Serbian</option>
+                <option value="Slovak">🇸🇰 Slovak</option>
+                <option value="Serbocroat">🇸🇮 Slovenian</option>
+                <option value="Spanish">🇪🇸 Spanish</option>
+                <option value="Swedish">🇸🇪 Swedish</option>
+                <option value="Turkish">🇹🇷 Turkish</option>
+                <option value="Ukrainian">🇺🇦 Ukrainian</option>
+            </select>
         </div>
-        <br>
+    <form>
+        <textarea id="inputText" rows="4" cols="50" placeholder="Enter text here"></textarea>
         <button type="button" id="transcribeBtn">Transcribe</button>
-        <br>
+        <label for="outputText"></label>
         <textarea id="outputText" rows="4" cols="50" readonly></textarea>
         <button type="button" id="copyBtn">Copy to Clipboard 📋</button>
+        <label>Developed by Evgeni Polyakov | <a
+                href="https://github.com/EvgeniPolyakov/Latin-to-Russian-name-transcriptor">Github project</a></label>
     </form>
 </div>
 <script type="text/javascript" src="front.js"></script>
