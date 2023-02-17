@@ -9,7 +9,9 @@
 <body>
 <div id="container">
     <h1>L2R Name Transcriptor</h1>
-        <div id="languageSelector">
+    <form>
+        <textarea id="inputText" rows="4" cols="50" placeholder="Enter text here"></textarea>
+        <div id="buttonContainer">
             <select id="languageSelect" onchange="setLanguage(this.value)">
                 <option value="" disabled selected>Select Language</option>
                 <option value="Albanian" >🇦🇱 Albanian</option>
@@ -51,10 +53,8 @@
                 <option value="Turkish">🇹🇷 Turkish</option>
                 <option value="Ukrainian">🇺🇦 Ukrainian</option>
             </select>
+            <button type="button" id="transcribeBtn">Transcribe</button>
         </div>
-    <form>
-        <textarea id="inputText" rows="4" cols="50" placeholder="Enter text here"></textarea>
-        <button type="button" id="transcribeBtn">Transcribe</button>
         <label for="outputText"></label>
         <textarea id="outputText" rows="4" cols="50" readonly></textarea>
         <button type="button" id="copyBtn">Copy to сlipboard 📋</button>

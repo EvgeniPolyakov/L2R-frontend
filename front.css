@@ -9,6 +9,58 @@
     font-family: 'TitleFont', sans-serif;
 }
 
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#languageSelect {
+    background-color: #295be0;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+#languageSelect:hover {
+    background-color: #1c3fa7;
+    box-shadow: 0 0 5px #1c3fa7;
+}
+
+select {
+    background-color: #295be0;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button[id="transcribeBtn"] {
+    background-color: #295be0;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
 @font-face {
     font-family: 'TitleFont';
     src: url('resources/Font.ttf') format('truetype');
@@ -51,25 +103,6 @@ textarea:focus {
     background-color: #eee;
 }
 
-button[id="transcribeBtn"] {
-    background-color: #295be0;
-    color: white;
-    padding: 12px 15px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-button[id="transcribeBtn"]:hover {
-    background-color: #295be0;
-    box-shadow: 0 0 5px #295be0;
-}
-
 button[id="copyBtn"] {
     background-color: #295be0;
     color: white;
@@ -85,8 +118,12 @@ button[id="copyBtn"] {
     transition: all 0.3s ease-in-out;
 }
 
-button[id="copyBtn"]:hover {
-    background-color: #295be0;
-    box-shadow: 0 0 5px #295be0;
+button:hover {
+    background-color: #1c3fa7;
+    box-shadow: 0 0 5px #1c3fa7;
 }
 
+#copyBtn:hover {
+    background-color: #1c3fa7;
+    box-shadow: 0 0 5px #1c3fa7;
+}
