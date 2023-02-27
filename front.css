@@ -1,16 +1,14 @@
-#container {
-    width: 50%;
-    margin: 50px auto;
+body {
+    width: 100%;
+    min-height: 100vh;
     text-align: center;
-    padding: 20px;
     background-color: #a4bbbd;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px #ccc;
     font-family: 'TitleFont', sans-serif;
 }
 
-#buttonContainer {
+#mainContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -18,11 +16,10 @@
 #languageSelect {
     background-color: #295be0;
     color: white;
-    padding: 12px 15px;
     border: none;
     cursor: pointer;
+    padding: 12px 15px;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
@@ -30,40 +27,39 @@
     margin-right: 20px;
 }
 
+select {
+    background-color: #295be0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
 #languageSelect:hover {
     background-color: #1c3fa7;
     box-shadow: 0 0 5px #1c3fa7;
 }
 
-select {
+.buttonStyle {
     background-color: #295be0;
     color: white;
     padding: 12px 15px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-button[id="transcribeBtn"] {
-    background-color: #295be0;
-    color: white;
-    padding: 12px 15px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    margin-right: 20px;
 }
 
 @font-face {
     font-family: 'TitleFont';
-    src: url('resources/Font.ttf') format('truetype');
+    src: url('resources/font.ttf') format('truetype');
 }
 
 form {
@@ -88,7 +84,6 @@ textarea {
     resize: both;
     overflow: auto;
     border: 1px solid #ccc;
-    padding: 10px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     border-radius: 5px;
@@ -99,23 +94,23 @@ textarea:focus {
     box-shadow: 0 0 5px #4ca3af;
 }
 
-#transcribedText {
-    background-color: #eee;
+#inputText {
+    width: 80vw;
+    height: 20vh;
+    max-width: 800px;
+    max-height: 600px;
+    resize: both;
+}
+#outputText {
+    width: 80vw;
+    height: 20vh;
+    max-width: 800px;
+    max-height: 600px;
+    resize: both;
 }
 
-button[id="copyBtn"] {
-    background-color: #295be0;
-    color: white;
-    padding: 12px 15px;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+#transcribedText {
+    background-color: #eee;
 }
 
 button:hover {
