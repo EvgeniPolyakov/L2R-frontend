@@ -1,6 +1,4 @@
 body {
-    width: 100%;
-    min-height: 100vh;
     text-align: center;
     background-color: #a4bbbd;
     font-family: 'TitleFont', sans-serif;
@@ -101,6 +99,7 @@ textarea:focus {
     max-height: 600px;
     resize: both;
 }
+
 #outputText {
     width: 80vw;
     height: 20vh;
